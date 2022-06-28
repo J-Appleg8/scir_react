@@ -1,0 +1,8 @@
+.hidden {
+  display: none;
+}
+
+.datatable {
+  font-size: 90%;
+  white-space: nowrap;
+}
