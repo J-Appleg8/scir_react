@@ -1,0 +1,46 @@
+{
+  "name": "django-react",
+  "version": "0.0.1",
+  "description": "An example Django/React app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run dev:css\" \"webpack serve --config webpack.dev.js\"",
+    "build": "npm run build:css && webpack --config webpack.prod.js",
+    "build:css": "npm run generate:css -- --minify",
+    "dev:css": "tailwindcss -w -i ./tailwind/input.css -o ./project/static/css/output.css",
+    "generate:css": "tailwindcss -i ./tailwind/input.css -o ./project/static/css/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "John Macy",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.4",
+    "concurrently": "^7.1.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "classnames": "^2.3.1",
+    "formik": "^2.2.9",
+    "js-cookie": "^3.0.1",
+    "lodash": "^4.17.21",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-query": "^4.0.0-beta.3",
+    "react-router-dom": "^6.3.0",
+    "tailwindcss": "^3.0.24",
+    "usehooks-ts": "^2.5.1",
+    "uuid": "^8.3.2",
+    "yup": "^0.32.11"
+  }
+}

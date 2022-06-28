@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+    
+    code, pre, .text-monospace {
+        font-family: 'JetBrains Mono', 'Consolas', monospace !important;
+    }
+
+    .navbar {
+        @apply sticky top-0 flex justify-between py-2 px-4;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(2px);
+    }
+
+    .navbar > div {
+        @apply flex gap-4;
+    }
+
+    a {
+        @apply text-blue-500;
+        @apply hover:text-blue-900;
+    }
+
+    main {
+        @apply p-4;
+    }
+
+    .container {
+        @apply mx-auto;
+    }
+
+    h1, h2, h3, h4 {
+        @apply font-bold;
+    }
+
+    h1 {
+        @apply text-xl;
+    }
+
+    h2 {
+        @apply text-lg;
+    }
+
+    .table-container {
+        @apply overflow-x-auto;
+    }
+
+    table.table {
+        @apply w-full;
+    }
+
+    table.table-striped {
+
+    }
+
+    table.table-bordered {
+        @apply border border-zinc-300;
+    }
+
+    table.table-bordered th,
+    table.table-bordered td {
+        @apply border border-zinc-300;
+    }
+
+    table.table-hover tr {
+        @apply hover:bg-zinc-100;
+    }
+
+    table.table th,
+    table.table td {
+        @apply py-1 px-2;
+    }
+
+    th {
+        @apply font-bold text-left;
+    }
+
+}
+
+@layer components {
+
+    .btn {
+        @apply py-2 px-4 rounded;
+        @apply bg-zinc-200 text-zinc-800;
+        @apply hover:bg-zinc-300;
+    }
+
+}
+
+@layer utilities {
+
+    .text-danger {
+        @apply text-red-700;
+    }
+
+}

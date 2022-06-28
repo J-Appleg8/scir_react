@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contents %}
+    <!-- entrypoint for React app -->
+    <div id="root"></div>
+{% endblock %}
+
+{% block scripts %}
+    {{ current_user|json_script:"current_user" }}
+    <script src="{% static 'frontend/colors.js' %}"></script>
+{% endblock %}

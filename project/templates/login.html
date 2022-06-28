@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block contents %}
+<style>
+    .form-container {
+        max-width: 300px;
+    }
+
+    form.login {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    form.login label {
+        margin: 0;
+    }
+</style>
+
+<div class="container form-container">
+    <h3 class="mb-5">Login</h3>
+
+    <form method="POST" class="login">
+        {% csrf_token %}
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-control form-control-sm" autofocus autocapitalize="none" autocomplete="username"
+            maxlength="150" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control form-control-sm" autocomplete="current-password" required>
+
+        <div class="d-flex justify-content-end pt-3">
+            <button type="submit" class="btn btn-sm btn-primary">Login</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

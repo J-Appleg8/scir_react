@@ -1,0 +1,132 @@
+[
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Red",
+            "is_primary": true,
+            "red": 255,
+            "green": 0,
+            "blue": 0
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "White",
+            "is_primary": false,
+            "red": 255,
+            "green": 255,
+            "blue": 255
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Blue",
+            "is_primary": true,
+            "red": 0,
+            "green": 0,
+            "blue": 255
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Gold",
+            "is_primary": false,
+            "red": 255,
+            "green": 215,
+            "blue": 0
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Purple",
+            "is_primary": false,
+            "red": 180,
+            "green": 0,
+            "blue": 255
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Gray",
+            "is_primary": false,
+            "red": 200,
+            "green": 200,
+            "blue": 200
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Green",
+            "is_primary": false,
+            "red": 0,
+            "green": 200,
+            "blue": 0
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Black",
+            "is_primary": false,
+            "red": 0,
+            "green": 0,
+            "blue": 0
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Yellow",
+            "is_primary": true,
+            "red": 255,
+            "green": 255,
+            "blue": 0
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Orange",
+            "is_primary": false,
+            "red": 255,
+            "green": 125,
+            "blue": 0
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Robin's Egg Blue",
+            "is_primary": false,
+            "red": 0,
+            "green": 200,
+            "blue": 255
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Sky Blue",
+            "is_primary": false,
+            "red": 150,
+            "green": 225,
+            "blue": 255
+        }
+    },
+    {
+        "model": "core.color",
+        "fields": {
+            "name": "Navy Blue",
+            "is_primary": false,
+            "red": 0,
+            "green": 0,
+            "blue": 200
+        }
+    }
+]
