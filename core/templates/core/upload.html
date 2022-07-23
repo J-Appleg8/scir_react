@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block contents %}
+
+<div class="container">
+    <h2>Import Items</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootsrap_form form %}
+        {% buttons %}
+        <button type="submit" class="btn btn-primary btn-large">Save</button>
+        {% endbuttons %}
+    </form>
+</div>
+
+{% endblock %}

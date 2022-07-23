@@ -141,7 +141,7 @@ LOGGING = {
         "timestamp": {"format": "{asctime} {message}", "style": "{"},
     },
     "handlers": {
-        "console": {"class": "logging.StreamHandler"},
+        # "console": {"class": "logging.StreamHandler"},
         "logs_file": {
             "class": "logging.FileHandler",
             "filename": os.path.join(BASE_DIR, "logs", "logs.log"),
@@ -149,7 +149,8 @@ LOGGING = {
         },
     },
     "root": {
-        "handlers": ["console", "logs_file"],
+        "handlers": ["logs_file"],
+        # "handlers": ["console", "logs_file"],
         "level": "DEBUG",
     },
     "loggers": {"django.db.backends": {"level": "DEBUG"}},

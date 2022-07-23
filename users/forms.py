@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 class NewUserForm(UserCreationForm):
     class Meta:
         model = get_user_model()
-        fields = ("username", "first_name", "last_name", "email", "password1", "password2")
+        fields = ("username", "first_name", "last_name", "email", "password1", "password2", "position")
 
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
@@ -16,4 +16,4 @@ class NewUserForm(UserCreationForm):
 class ChangeUserInfoForm(UserChangeForm):
     class Meta:
         model = get_user_model()
-        fields = ("username", "first_name", "last_name", "email")
+        fields = ("username", "first_name", "last_name", "email", "position")
