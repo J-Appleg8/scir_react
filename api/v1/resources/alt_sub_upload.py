@@ -117,50 +117,18 @@ class Serializers:
                 items_to_delete = db - file_data_set
                 print(f"Items to Delete: {len(items_to_delete)}")
 
-                for (
-                    plant,
-                    model,
-                    typecd,
-                    prim_mat,
-                    rep_part,
-                    nha,
-                    altsubcd,
-                    subcd,
-                    wbs,
-                    revlev,
-                    res_chng,
-                    itemtxt,
-                    createdby,
-                    creatd,
-                ) in items_to_delete:
+                for (plant, model, typecd, prim_mat, rep_part, nha, altsubcd, subcd, wbs, revlev, res_chng, itemtxt, createdby, creatd) in items_to_delete:
                     AltSub.objects.filter(plant=plant).filter(model=model).filter(type_code=typecd).filter(primary_material_id=prim_mat).filter(
                         replacement_part_id=rep_part
                     ).delete()
 
                 # ################################################################################
-                # Add items to database
+                # Add items to database - Create list of dictionaries for the new items to add
                 items_to_add = file_data_set - db
                 print(f"Items to Add: {len(items_to_add)}")
-
-                # Create list of dictionaries for the new items to add
                 items_to_add_list_dict = []
 
-                for (
-                    plant,
-                    model,
-                    typecd,
-                    prim_mat,
-                    rep_part,
-                    nha,
-                    altsubcd,
-                    subcd,
-                    wbs,
-                    revlev,
-                    res_chng,
-                    itemtxt,
-                    createdby,
-                    creatd,
-                ) in items_to_add:
+                for (plant, model, typecd, prim_mat, rep_part, nha, altsubcd, subcd, wbs, revlev, res_chng, itemtxt, createdby, creatd) in items_to_add:
                     new_dict = {}
                     new_dict["Plnt"] = (plant,)
                     new_dict["Model"] = (model,)

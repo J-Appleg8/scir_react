@@ -3,17 +3,18 @@ from rest_framework import serializers, viewsets
 from api.viewsets import ProjectionsAndFilters
 from core.models import Color
 
+
 class Serializers:
     class Summary(serializers.ModelSerializer):
         class Meta:
             model = Color
             fields = [
-                'id',
-                'name',
-                'is_primary',
-                'red',
-                'green',
-                'blue',
+                "id",
+                "name",
+                "is_primary",
+                "red",
+                "green",
+                "blue",
             ]
 
         def create(self, validated_data):
@@ -26,32 +27,33 @@ class Serializers:
         class Meta:
             model = Color
             fields = [
-                'id',
-                'name',
-                'is_primary',
-                'red',
-                'green',
-                'blue',
-                'hex_code',
+                "id",
+                "name",
+                "is_primary",
+                "red",
+                "green",
+                "blue",
+                "hex_code",
             ]
 
     for_ = {
-        'summary': Summary,
-        'detail': Detail,
+        "summary": Summary,
+        "detail": Detail,
     }
+
 
 class Viewset(ProjectionsAndFilters):
     serializer_class = Serializers.Summary
     serializers = Serializers
     queryset = Color.objects.all()
-    ordering_fields = '__all__'
+    ordering_fields = "__all__"
 
     filters = {
-        'name': lambda q,v,_: q.filter(name__icontains=v),
-        'is_primary': lambda q,v,_: q.filter(is_primary=json.loads(v)),
-        'red': lambda q,v,_: q.filter(red=v),
-        'green': lambda q,v,_: q.filter(green=v),
-        'blue': lambda q,v,_: q.filter(blue=v),
+        "name": lambda q, v, _: q.filter(name__icontains=v),
+        "is_primary": lambda q, v, _: q.filter(is_primary=json.loads(v)),
+        "red": lambda q, v, _: q.filter(red=v),
+        "green": lambda q, v, _: q.filter(green=v),
+        "blue": lambda q, v, _: q.filter(blue=v),
     }
 
     def list(self, request, *args, **kwargs):
@@ -71,4 +73,3 @@ class Viewset(ProjectionsAndFilters):
 
     def destroy(self, request, *args, **kwargs):
         return super().destroy(request, *args, **kwargs)
-
